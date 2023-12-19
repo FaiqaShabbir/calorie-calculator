@@ -1,7 +1,9 @@
 FROM python:3.9
-WORKDIR /calorie-calculator-python-code
+WORKDIR /calorie-calculator/calorie-calculator-python-code
 COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN python -m venv venv && \
+    . venv/bin/activate && \
+    pip install --no-cache-dir -r requirements.txt
 COPY . .
 RUN python manage.py collectstatic --no-input
 EXPOSE 8000
