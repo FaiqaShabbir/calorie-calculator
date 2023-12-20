@@ -124,6 +124,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static'),
 ]
 
+ALLOWED_HOSTS = ['caloriecalculator-w7yofend.b4a.run', 'localhost', '127.0.0.1']
+
 # Add the following line to set STATIC_ROOT for production
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
