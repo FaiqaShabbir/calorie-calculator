@@ -1,5 +1,5 @@
 FROM python:3.9
-WORKDIR /calorie-calculator
+WORKDIR /calorie-calculator-python-code
 COPY requirements.txt ./
 RUN python -m venv venv && \
     . venv/bin/activate && \
